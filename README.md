@@ -1,40 +1,5 @@
 # Autonomous Drone-Based Real-Time Pollution Monitoring System
 
-## Table of Contents
-
-[Introduction](#introduction)
-
-[Features](#Features)
-
-[Technical Architecture](#TechnicalArchitecture)
-System Overview
-Data Flow Diagram
-Hardware Components
-Drone Platform
-Sensors
-Onboard Computer
-Communication Module
-Software Components
-Drone Flight Management Software
-Mission Planner
-Data Processing and Storage
-Web Interface for Visualization
-Installation
-Hardware Setup
-Software Setup
-Usage
-Assigning Missions
-Autonomous Flight and Data Collection
-Real-Time Data Upload
-Data Visualization
-Interactive Maps
-Charts and Graphs
-Safety Mechanisms
-Challenges and Solutions
-Future Work
-Contributing
-License
-
 #### Introduction
 The Autonomous Drone-Based Real-Time Pollution Monitoring System is designed to enhance air quality monitoring by utilizing autonomous drones equipped with advanced sensors and real-time data transmission capabilities. The system aims to extend the reach of existing pollution monitoring stations, providing comprehensive data collection over a wide geographical area. By automating drone operations and implementing safety mechanisms, the solution addresses the challenges of drone operation and data acquisition.
 
