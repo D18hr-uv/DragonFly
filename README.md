@@ -1,6 +1,5 @@
 # Autonomous Drone-Based Real-Time Pollution Monitoring System
 
-<img width="607" alt="Screenshot 2024-09-10 at 1 42 32 PM" src="https://github.com/user-attachments/assets/d979a974-95bf-43ac-ae39-24e804925932"># DragonFly
 
 ## Table of Contents
 
@@ -99,12 +98,17 @@ Data Analytics Tools: Provides charts and graphs for trend analysis.
 User Access Control: Secure login for data access and administration.
 Installation
 
+<img width="1159" alt="Screenshot 2024-09-10 at 1 49 23 PM" src="https://github.com/user-attachments/assets/36c1cdd9-3c62-4561-9009-d6dee9d67d29">
+
+
 Hardware Setup
 Assemble the Drone: Follow the assembly guide to build the drone frame and install components.
 Install Sensors: Mount the BME680 and GP2Y sensors securely on the drone.
 Set Up Onboard Computer: Install the NVIDIA Jetson Nano and connect it to the sensors and communication modules.
 Integrate 5G Module: Connect the 5G module to the onboard computer for network access.
 Power Management: Ensure batteries are installed and configured correctly.
+
+
 
 Software Setup
 Install Drone Firmware: Load the flight control firmware compatible with the mission planner.
@@ -114,6 +118,9 @@ Deploy Data Processing Scripts: Install necessary scripts on the NVIDIA computer
 Configure AWS Server: Set up cloud storage buckets and databases for data reception.
 Deploy Web Interface: Host the visualization platform on a web server, connecting it to the AWS backend.
 Usage
+
+<img width="607" alt="Screenshot 2024-09-10 at 1 42 32 PM" src="https://github.com/user-attachments/assets/d979a974-95bf-43ac-ae39-24e804925932"># DragonFly
+
 
 Assigning Missions
 Access the Flight Management Software: Authorized personnel log in to the software interface.
@@ -125,6 +132,10 @@ Launch Mission: Send the mission to the drone over the 5G network.
 Autonomous Flight and Data Collection
 Takeoff: Drone performs automated pre-flight checks and takes off.
 Navigation: Flies to the designated GPS coordinates using onboard GPS and navigation systems.
+
+![photo_2024-09-10 13 45 43](https://github.com/user-attachments/assets/3c5fd76d-f7c3-4425-b283-79f6f5371b71)
+
+
 Data Collection:
 Hovers at the specified altitude.
 Sensors collect air quality data.
@@ -145,6 +156,7 @@ Temporal Analysis: Line charts showing pollution levels over time.
 Comparative Analysis: Bar graphs comparing different pollutants or locations.
 Alerts: Notifications for areas exceeding pollution thresholds.
 Safety Mechanisms
+
 
 Free Fall Detection: Sensors detect rapid descent, triggering automatic safety protocols.
 Battery Monitoring: Continuous monitoring ensures the drone returns before the battery depletes.
@@ -180,4 +192,4 @@ License
 
 This project is licensed under the MIT License.
 
-For any questions or support, please contact your-email@example.com.
+For any questions or support, please contact dragonfly.on.nano@gmail.com.
