@@ -1,7 +1,8 @@
-<img width="607" alt="Screenshot 2024-09-10 at 1 42 32 PM" src="https://github.com/user-attachments/assets/d979a974-95bf-43ac-ae39-24e804925932"># DragonFly
-Autonomous Drone-Based Real-Time Pollution Monitoring System
+# Autonomous Drone-Based Real-Time Pollution Monitoring System
 
-Table of Contents
+<img width="607" alt="Screenshot 2024-09-10 at 1 42 32 PM" src="https://github.com/user-attachments/assets/d979a974-95bf-43ac-ae39-24e804925932"># DragonFly
+
+## Table of Contents
 
 Introduction
 Features
