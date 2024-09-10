@@ -12,7 +12,7 @@
     <!-- FontAwesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
@@ -128,14 +128,14 @@
             <div class="col-lg-6">
                 <div class="data-container bg-light p-4">
                     <h3 class="text-primary mb-4">Atmospheric Data</h3>
-                    <form id="location-form" class="mb-4">
+                    <!-- <form id="location-form" class="mb-4">
                         <div class="mb-3">
                             <label for="locationInput" class="form-label">Enter Location:</label>
                             <input type="text" class="form-control" id="locationInput"
                                 placeholder="Enter your location">
                         </div>
                         <button type="submit" class="btn btn-primary">Get Data</button>
-                    </form>
+                    </form> -->
                     <div id="dataDisplay">
                         <h5 class="mb-3">Data will appear here:</h5>
                         <ul class="list-group">
@@ -154,6 +154,7 @@
                     <div id="pac-container">
                         <input id="pac-input" type="text" class="form-control" placeholder="Enter a location">
                         <button id="current-location" class="btn btn-secondary mt-3">Use Current Location</button>
+                        <button type="submit" class="btn btn-secondary mt-3">Get Data</button>
                     </div>
                 </div>
                 <div id="map" class="map-container"></div>
@@ -174,7 +175,127 @@
         async defer></script>
 
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+        let autocomplete;
+let map;
+let infoWindow;
+let marker;
+
+function initMap() {
+    // Create the map
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -33.8688, lng: 151.2195 },
+        zoom: 13,
+        mapTypeId: "roadmap",
+    });
+
+    // Create the search box and link it to the UI element
+    const input = document.getElementById("pac-input");
+    autocomplete = new google.maps.places.Autocomplete(input);
+
+    // Specify just geocode results to get precise addresses
+    autocomplete.setFields(["address_components", "geometry", "icon", "name"]);
+
+    // When the user selects an address from the dropdown, place a marker
+    autocomplete.addListener("place_changed", () => {
+        const place = autocomplete.getPlace();
+        if (!place.geometry || !place.geometry.location) {
+            console.log("No details available for input: '" + place.name + "'");
+            return;
+        }
+
+        // If the place has a geometry, then show it on the map.
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+        }
+
+        // Place a marker on the map
+        if (marker) {
+            marker.setMap(null);
+        }
+        marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location,
+        });
+
+        // Show details about the place
+        document.getElementById("place-name").textContent = place.name;
+        document.getElementById("place-address").textContent =
+            place.address_components
+                .map((component) => component.long_name)
+                .join(", ");
+    });
+
+    // Add event listener for "Use Current Location" button
+    document.getElementById("current-location").addEventListener("click", () => {
+        // Check if geolocation is available
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+
+                    // Center the map on the user's current location
+                    map.setCenter(pos);
+                    map.setZoom(15); // Zoom in on the user's location
+
+                    // Place a marker on the current location
+                    if (marker) {
+                        marker.setMap(null);
+                    }
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: pos,
+                    });
+
+                    // Use reverse geocoding to display address
+                    const geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ location: pos }, (results, status) => {
+                        if (status === "OK") {
+                            if (results[0]) {
+                                document.getElementById("place-name").textContent =
+                                    "Your Location";
+                                document.getElementById("place-address").textContent =
+                                    results[0].formatted_address;
+                            } else {
+                                console.log("No results found");
+                            }
+                        } else {
+                            console.log("Geocoder failed due to: " + status);
+                        }
+                    });
+                },
+                () => {
+                    handleLocationError(true, map.getCenter());
+                }
+            );
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, map.getCenter());
+        }
+    });
+}
+
+// Error handling function for Geolocation
+function handleLocationError(browserHasGeolocation, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(
+        browserHasGeolocation
+            ? "Error: The Geolocation service failed."
+            : "Error: Your browser doesn't support geolocation."
+    );
+    infoWindow.open(map);
+}
+
+
+    </script>
 </body>
 
 </html>
