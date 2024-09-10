@@ -1,6 +1,5 @@
 # Autonomous Drone-Based Real-Time Pollution Monitoring System
 
-
 ## Table of Contents
 
 Introduction
@@ -192,4 +191,25 @@ License
 
 This project is licensed under the MIT License.
 
+Team Details
+Team Name: DRAGONFLY
+
+Team Leader: Prashant Kumar
+
+Team Members:
+
+*Prashant - 2021UEA6565 - @Prashant2804*
+
+*Tatwansh Jaiswal - 2021UCB6023 - @Tatwansh*
+
+*Vishal Kumar - 2022UEA6572 - Sonia-036*
+
+*Vaibhav Bhatia - 2021UEA6519 - Vaibhav-Bhatia-29*
+
+*Sonia - 2022UCB6058 - sonia-036*
+
+*Dhruv Bhardwaj - 2022UCB6056 - D18hr-uv*
+
 For any questions or support, please contact dragonfly.on.nano@gmail.com.
+
+
