@@ -210,6 +210,10 @@ Team Members:
 
 *Dhruv Bhardwaj - 2022UCB6056 - D18hr-uv*
 
+# Presentation Link: https://drive.google.com/file/d/1-rRpX-yOBYdBNJCx_QKKyCrxQJtyGUA8/view?usp=sharing
+
+# Video Link: 
+
 For any questions or support, please contact dragonfly.on.nano@gmail.com.
 
 
