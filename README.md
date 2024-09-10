@@ -5,7 +5,8 @@
 [Introduction](#introduction)
 
 [Features](#Features)
-Technical Architecture
+
+[Technical Architecture](#TechnicalArchitecture)
 System Overview
 Data Flow Diagram
 Hardware Components
