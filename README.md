@@ -4,7 +4,7 @@
 
 [Introduction](#introduction)
 
-Features
+[Features](#Features)
 Technical Architecture
 System Overview
 Data Flow Diagram
