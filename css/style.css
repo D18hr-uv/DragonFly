@@ -327,6 +327,7 @@ body{
 
 .carousel .carousel-inner .carousel-item .carousel-caption-2  {
     position: absolute;
+    background-color: aqua;
     width: 100%;
     height: 100%;
     top: 0;
@@ -340,13 +341,13 @@ body{
 }
 
 .carousel-caption-2-content {
-    text-align: start;
+    text-align: center;
     padding-left: 100px;
 }
 
 .carousel-caption-2-content .carousel-caption-2-content-btn {
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 
 
@@ -901,4 +902,15 @@ body{
 }
 /*** copyright end ***/
 
+/* .bg-back{
+    background-color: #481d02;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 0.45rem;
+} */
 
+.circle-img{
+    border-radius: 50% 50% 50% 50%;
+    scale: 150%;
+}
