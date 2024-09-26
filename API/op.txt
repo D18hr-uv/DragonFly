@@ -1,0 +1,5 @@
+{
+  "database_name": "sensorDB",
+  "table_name": "BME680, GPS_Coords",
+  "query_string": "SELECT * FROM myDatabase.myTable WHERE time > now() - interval '1 hour'"
+}
