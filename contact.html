@@ -21,6 +21,25 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
+            .about-us-section {
+            background-image: url('img/carousel-1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+        }
+        .about-us-section .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        </style>
     </head>
     <body>
         <!-- Spinner Start -->
@@ -82,10 +101,10 @@
                 </div>
             </nav>
             <!-- Header Start -->
-            <div class="container-fluid bg-breadcrumb">
+            <div class="container-fluid about-us-section">
                 <div class="container text-center py-5" style="max-width: 900px;">
                     <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
-                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s" style="background-color: white; border-radius: 5px;">
                         <li class="breadcrumb-item">
                             <a href="index.html">Home</a>
                         </li>
