@@ -184,7 +184,6 @@ body{
     }
 
     .navbar-light {
-        position: absolute;
         width: 100%;
         top: 0;
         left: 0;
@@ -863,7 +862,8 @@ body{
 
 /*** Footer Start ***/
 .footer {
-    background: #481d02;
+    /* background: #481d02; */
+    background: black;
 }
 
 .footer .footer-item a {
